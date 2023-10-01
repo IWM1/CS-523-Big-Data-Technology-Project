@@ -1,0 +1,24 @@
+APP:
+  Footballer:
+    player_country: "player_country";
+    first_name: "first_name";
+    last_name: "last_name";
+    goals_scored:  "goals_scored";
+    champions_league_matches_played: "champions_league_matches_played";
+    english_league_matches_played: "english_league_matches_played";
+    minutes_played: "minutes_played";
+    assists: "assists";
+    tackles: "tackles";
+    age: "age";
+    csvFilePath: "/home/DESKTOP/CSS523/FOOTBALLERS-DATA.csv";
+  Kafka:
+    Topic: "FootballersTopic";
+    server: "localhost:9092";
+  SPARK:
+    Table_name: "FootballersTable"
+    Directory: "/home//Desktop/BDT-FinalProject/apache-hive-3.1.2-bin/Directory";
+    URL: "thrift://localhost:9083";
+  SQL:
+    Use_default_schema: "USE default"
+    Get_footballer_data: "SELECT * FROM footballers"
+    Advanced_sql: "SELECT age, AVG(minutes_played / (champions_league_matches_played + english_league_matches_played)) AS avg_minutes_per_match FROM public.players GROUP BY age ORDER BY age ASC;"
